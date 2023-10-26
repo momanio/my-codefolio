@@ -112,7 +112,7 @@ export default function NavBar({ Logo }) {
               src={Logo}
               width='35'
               height='35'
-              className='rounded-circle'
+              className='rounded-pill'
             />
           </Navbar.Brand>
           <Navbar.Toggle
