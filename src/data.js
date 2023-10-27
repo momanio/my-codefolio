@@ -32,7 +32,7 @@ export const Blog = <Icon icon='ph:link-bold' />;
   Add a second paragraph for the about me section.
 */
 export const moreInfo =
-  'Frontend Developer With expertise in JavaScript, HTML5, CSS3, and frameworks like Angular and React, Im dedicated to delivering top-quality code and responsive designs on tight deadlines. My collaborative spirit and commitment to staying updated with the latest trends ensure I provide efficient solutions';
+  'Frontend Developer With expertise in JavaScript, HTML5, CSS3, and frameworks like Angular and React, Im dedicated to delivering top-quality code and responsive designs on tight deadlines. My collaborative spirit and commitment to staying updated with the latest trends ensure I provide efficient solutions.';
 
 /* Skills
  ************************************************************** 

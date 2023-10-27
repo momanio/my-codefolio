@@ -20,7 +20,7 @@ const StyledAboutMe = styled.section`
 `;
 
 export default function AboutMe() {
-  const { avatar_url, bio } = useSelector(selectData);
+  const { avatar_url } = useSelector(selectData);
 
   return (
     <Element name={'About'} id='about'>
@@ -34,10 +34,7 @@ export default function AboutMe() {
           </Container>
           <Row className='align-items-center mt-5'>
             <Col className='d-flex flex-column text-center'>
-              <Container>
-                <p>{bio}</p>
-                {moreInfo && <p>{moreInfo}</p>}
-              </Container>
+              <Container>{moreInfo && <p>{moreInfo}</p>}</Container>
             </Col>
             <Col className='d-none d-md-block text-center'>
               <img
@@ -50,6 +47,8 @@ export default function AboutMe() {
             </Col>
           </Row>
         </Container>
+      </StyledAboutMe>
+      <StyledAboutMe className='section'>
         <Container>
           <Container className='d-flex'>
             <Title>
@@ -58,13 +57,6 @@ export default function AboutMe() {
             </Title>
           </Container>
           <Row className='align-items-center mt-5'>
-            <Col className='d-flex flex-column text-center'>
-              <Container>
-                {EduInfo && <p>{EduInfo}</p>}
-                {UniversityInfo && <p>{UniversityInfo}</p>}
-                <p>Graduation Year: 2019</p>
-              </Container>
-            </Col>
             <Col className='d-none d-md-block text-center'>
               <img
                 src={UniLogo}
@@ -73,6 +65,17 @@ export default function AboutMe() {
                 className='mx-auto rounded-circle'
                 style={{ width: '15rem', height: '15rem' }}
               />
+            </Col>
+            <Col className='d-flex flex-column text-center'>
+              <Container>
+                {EduInfo && (
+                  <p>
+                    <b>{EduInfo}</b>
+                  </p>
+                )}
+                {UniversityInfo && <p>{UniversityInfo}</p>}
+                <p>Graduation Year: 2019</p>
+              </Container>
             </Col>
           </Row>
         </Container>
