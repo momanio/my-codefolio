@@ -13,12 +13,9 @@ import Footer from '../components/Footer';
 export default function Home() {
   const { name } = useSelector(selectData);
 
-  React.useEffect(
-    function () {
-      document.title = `${name} | Codefolio`;
-    },
-    [name]
-  );
+  React.useEffect(() => {
+    document.title = `${name} | Codefolio`;
+  }, [name]);
 
   return (
     <>

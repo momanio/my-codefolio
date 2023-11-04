@@ -1,9 +1,9 @@
-import React from "react";
-import { useAppContext } from "../appContext";
+import React from 'react';
+import { useAppContext } from '../appContext';
 // Data
-import { formspreeUrl } from "../data";
+import { formspreeUrl } from '../data';
 // Components
-import { Alert, Button, Form, Spinner } from "react-bootstrap";
+import { Alert, Button, Form, Spinner } from 'react-bootstrap';
 
 export default function ContactForm() {
   const [isValidated, setIsValidated] = React.useState(false);
@@ -15,11 +15,11 @@ export default function ContactForm() {
 
   async function postData(data) {
     const response = await fetch(formspreeUrl, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify(data),
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
       },
     });
     return response;
@@ -69,50 +69,50 @@ export default function ContactForm() {
   return (
     <>
       <Form noValidate validated={isValidated} onSubmit={handleSubmit}>
-        <Form.Group className="mx-auto mb-3 form-group" controlId="name">
+        <Form.Group className='mx-auto mb-3 form-group' controlId='name'>
           <Form.Label>Name</Form.Label>
-          <Form.Control required type="text" placeholder="Your name" />
-          <Form.Control.Feedback type="invalid">
+          <Form.Control required type='text' placeholder='Your name' />
+          <Form.Control.Feedback type='invalid'>
             <h5>Name must be at least one character.</h5>
           </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group className="mx-auto mb-3 form-group" controlId="email">
+        <Form.Group className='mx-auto mb-3 form-group' controlId='email'>
           <Form.Label>Email address</Form.Label>
           <Form.Control
             required
-            pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
-            placeholder="someone@something.com"
+            pattern='^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$'
+            placeholder='someone@something.com'
           />
-          <Form.Control.Feedback type="invalid">
+          <Form.Control.Feedback type='invalid'>
             <h5>Please enter a valid email.</h5>
           </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group className="mx-auto mb-3 form-group" controlId="message">
+        <Form.Group className='mx-auto mb-3 form-group' controlId='message'>
           <Form.Label>Message</Form.Label>
-          <Form.Control required as="textarea" placeholder="Your message..." />
-          <Form.Control.Feedback type="invalid">
+          <Form.Control required as='textarea' placeholder='Your message...' />
+          <Form.Control.Feedback type='invalid'>
             <h5>Please provide a valid message.</h5>
           </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group className="mx-auto text-center form-group">
+        <Form.Group className='mx-auto text-center form-group'>
           {formspreeUrl && (
             <Button
-              size="lg"
-              variant={theme === "light" ? "outline-dark" : "outline-light"}
-              type="submit"
+              size='lg'
+              variant={theme === 'light' ? 'outline-dark' : 'outline-light'}
+              type='submit'
               disabled={isProcessing}
-              className="my-4"
+              className='my-4'
             >
-              Submit{" "}
+              Submit{' '}
               {isProcessing && (
-                <Spinner animation="border" variant="success" size="sm" />
+                <Spinner animation='border' variant='success' size='sm' />
               )}
             </Button>
           )}
 
           <Alert
             show={success}
-            variant="success"
+            variant='success'
             onClose={() => setSuccess(false)}
             dismissible
           >
@@ -120,13 +120,13 @@ export default function ContactForm() {
           </Alert>
           <Alert
             show={danger}
-            variant="danger"
+            variant='danger'
             onClose={() => setDanger(false)}
             dismissible
           >
             <Alert.Heading>{dangerMessage}</Alert.Heading>
           </Alert>
-          <Alert show={!formspreeUrl} variant="danger">
+          <Alert show={!formspreeUrl} variant='danger'>
             <Alert.Heading>
               You must provide a valid formspree url in data.js
             </Alert.Heading>

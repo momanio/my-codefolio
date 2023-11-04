@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
 const AppContext = React.createContext();
 
 const AppProvider = function ({ children }) {
-  const [theme, setTheme] = React.useState("light");
+  const [theme, setTheme] = React.useState('light');
   const [isExpanded, setExpanded] = React.useState(false);
 
-  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
+  const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
 
   const toggleExpanded = () => setExpanded((prevState) => !prevState);
 
-  const closeExpanded = function () {
-    setTimeout(function () {
+  const closeExpanded = () => {
+    setTimeout(() => {
       setExpanded(false);
     }, 250);
   };

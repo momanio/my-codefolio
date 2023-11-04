@@ -45,7 +45,7 @@ const FixedNavSpacer = styled.div`
   height: var(--nav-height);
 `;
 
-function ThemeToggle() {
+const ThemeToggle = () => {
   const { theme, toggleTheme, closeExpanded } = useAppContext();
 
   return (
@@ -64,7 +64,7 @@ function ThemeToggle() {
       </div>
     </StyledSwitch>
   );
-}
+};
 // #endregion
 
 // #region component
