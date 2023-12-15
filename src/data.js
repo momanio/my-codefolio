@@ -60,29 +60,37 @@ export const skillData = [
 
   {
     id: 4,
+    skill: <Icon icon='mdi:language-typescript' className='display-4' />,
+    name: 'TypeScript',
+  },
+
+
+  {
+    id: 5,
     skill: <Icon icon='mdi:angular' className='display-4' />,
     name: 'Angular',
   },
   {
-    id: 5,
+    id: 6,
     skill: <Icon icon='mdi:react' className='display-4' />,
     name: 'React',
   },
   {
-    id: 6,
+    id: 7,
     skill: <Icon icon='ri:bootstrap-fill' className='display-4' />,
     name: 'BootStrap',
-  },
-  {
-    id: 7,
-    skill: <Icon icon='bi:git' className='display-4' />,
-    name: 'Git',
-  },
+  }, 
   {
     id: 8,
     skill: <Icon icon='mdi:sass' className='display-4' />,
     name: 'Sass',
   },
+  {
+    id: 9,
+    skill: <Icon icon='bi:git' className='display-4' />,
+    name: 'Git',
+  },
+ 
 ];
 
 // Resume link (string - "https://YourResumeUrl") - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
