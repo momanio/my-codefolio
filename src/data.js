@@ -44,18 +44,19 @@ export const UniversityInfo = `Jordan University of scinse and technology`;
 export const skillData = [
   {
     id: 1,
+    skill: <Icon icon="fa6-brands:js" className="display-4" />,
+    name: "JavaScript",
+  },
+
+  {
+    id: 2,
     skill: <Icon icon="mdi:language-html5" className="display-4" />,
     name: "HTML5",
   },
   {
-    id: 2,
+    id: 3,
     skill: <Icon icon="ion:logo-css3" className="display-4" />,
     name: "CSS3",
-  },
-  {
-    id: 3,
-    skill: <Icon icon="fa6-brands:js" className="display-4" />,
-    name: "JavaScript",
   },
 
   {
@@ -66,28 +67,26 @@ export const skillData = [
 
   {
     id: 5,
+    skill: <Icon icon="bi:git" className="display-4" />,
+    name: "Git",
+  },
+];
+
+export const JsFrameworks = [
+  {
+    id: 1,
     skill: <Icon icon="mdi:angular" className="display-4" />,
     name: "Angular",
   },
   {
-    id: 6,
+    id: 2,
     skill: <Icon icon="mdi:react" className="display-4" />,
     name: "React",
   },
   {
-    id: 7,
-    skill: <Icon icon="ri:bootstrap-fill" className="display-4" />,
-    name: "BootStrap",
-  },
-  {
-    id: 8,
-    skill: <Icon icon="mdi:sass" className="display-4" />,
-    name: "Sass",
-  },
-  {
-    id: 9,
-    skill: <Icon icon="bi:git" className="display-4" />,
-    name: "Git",
+    id: 3,
+    skill: <Icon icon="mdi:react" className="display-4" />,
+    name: "React",
   },
 ];
 
